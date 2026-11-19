@@ -21,6 +21,7 @@ MT4|IC Markets|https://download.mql5.com/cdn/web/18036/mt4/icmarketssc4setup.exe
 MT4|Instaforex|https://www.instaforex.com/downloads/itc4setup.exe
 MT4|JustMarkets|https://download.mql5.com/cdn/web/just.global.markets/mt4/justmarkets4setup.exe
 MT4|Markets4you|https://download.mql5.com/cdn/web/20142/mt4/eglobaltrade4setup.exe
+MT4|MetaQuotes (Original)|https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/mt4setup.exe
 MT4|OctaFX|https://download.mql5.com/cdn/web/octa.markets.incorporated/mt4/octafx4setup.exe
 MT4|Pepperstone|https://download.mql5.com/cdn/web/pepperstone.group.limited/mt4/pepperstone4setup.exe
 MT4|PU Prime|https://download.mql5.com/cdn/web/pu.prime.ltd/mt4/puprime4setup.exe
@@ -50,6 +51,7 @@ MT5|IC Markets|https://download.mql5.com/cdn/web/18040/mt5/icmarketssc5setup.exe
 MT5|Instaforex|https://download.mql5.com/cdn/web/instant.trading.eu/mt5/instaforex5setup.exe
 MT5|JustMarkets|https://download.mql5.com/cdn/web/just.global.markets/mt5/justmarkets5setup.exe
 MT5|Markets4you|https://download.mql5.com/cdn/web/eglobal.trade.and/mt5/eglobaltrade5setup.exe
+MT5|MetaQuotes (Original)|https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/mt5setup.exe
 MT5|MT5 Global|https://download.mql5.com/cdn/web/metaquotes.ltd/mt5/mt5setup.exe
 MT5|OctaFX|https://download.mql5.com/cdn/web/octa.markets.incorporated/mt5/octafx5setup.exe
 MT5|Pepperstone|https://eu-assets.contentstack.com/v3/assets/bltd74737b907a31bbb/blt03faf7c29b2bcc74/pepperstone5setup.exe
