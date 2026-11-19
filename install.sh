@@ -6,23 +6,8 @@ set -euo pipefail
 REPO="SI-Public-Repo/MT-Manager-Linux"
 BASE="${MT_RELEASE_BASE:-https://raw.githubusercontent.com/$REPO/main}"
 TARGET="$HOME/mtml"
-PASS_HASH="f2f6fd314ec5b03a793717e4049961b5665330d38ee80f52a0772d1d0f6b3f99"
 
 echo "=== MT Manager installer ==="
-if [ ! -r /dev/tty ]; then
-    echo "This installer needs an interactive terminal to ask for the password."
-    echo "Run it directly in your SSH session (not from a non-interactive script)."
-    exit 1
-fi
-read -r -s -p "Installer password: " PASS < /dev/tty; echo
-HASH="$(printf '%s' "$PASS" | sha256sum | cut -d' ' -f1)"
-unset PASS
-if [ "$HASH" != "$PASS_HASH" ]; then
-    echo "Incorrect password. Installation cancelled."
-    exit 1
-fi
-echo "Password OK."
-
 echo "=== Finding the latest version ==="
 TAG="$(curl -fsSL "$BASE/releases/latest.txt" 2>/dev/null | tr -d '[:space:]')" || true
 if [ -z "$TAG" ]; then
