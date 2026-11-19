@@ -2,7 +2,8 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "=== Installing dependencies ==="
-sudo apt install -y python3-tk yad
+sudo apt-get update -y || true
+sudo apt-get install -y python3-tk yad
 
 echo "=== Creating desktop shortcut ==="
 DESKTOP_FILE="$HOME/Desktop/mt_manager.desktop"

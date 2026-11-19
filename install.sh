@@ -9,7 +9,17 @@ TARGET="$HOME/mtml"
 PASS_HASH="f2f6fd314ec5b03a793717e4049961b5665330d38ee80f52a0772d1d0f6b3f99"
 
 echo "=== MT Manager installer ==="
-read -r -s -p "Installer password: " PASS; echo
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "python3 is required but not found. Installing it..."
+    sudo apt-get update -y >/dev/null 2>&1 || true
+    sudo apt-get install -y python3 || { echo "Could not install python3. Aborting."; exit 1; }
+fi
+if [ ! -r /dev/tty ]; then
+    echo "This installer needs an interactive terminal to ask for the password."
+    echo "Run it directly in your SSH session (not from a non-interactive script)."
+    exit 1
+fi
+read -r -s -p "Installer password: " PASS < /dev/tty; echo
 HASH="$(printf '%s' "$PASS" | sha256sum | cut -d' ' -f1)"
 unset PASS
 if [ "$HASH" != "$PASS_HASH" ]; then
